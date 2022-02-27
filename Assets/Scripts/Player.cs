@@ -26,4 +26,15 @@ public class Player : MonoBehaviour
         }
         jumpKeyPressed = false;
     }
+
+    private void OnTriggerEnter2D(Collider2D objectColidingWith)
+    {
+        // Debug.Log("here");
+        Debug.Log(objectColidingWith.name);
+        Debug.Log(objectColidingWith.tag);
+        // Destroy(gameObject);
+         if (objectColidingWith.tag == "Pipe") {
+             Destroy(gameObject);
+         }
+    }
 }
