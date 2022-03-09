@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Pipe : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool moving;
     void Start()
     {
-        
     }
 
     void Update()
-    // Update is called once per frame
     {
-        gameObject.transform.position += Vector3.left * 1f * Time.deltaTime;
+        if (moving)
+        {
+            gameObject.transform.position += Vector3.left * 1f * Time.deltaTime;
+        }
     }
 }
